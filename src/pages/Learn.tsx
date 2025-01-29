@@ -17,38 +17,122 @@ type Question = {
 const questions: Question[] = [
   {
     id: 1,
-    scenario: "A company is experiencing high turnover rates and declining employee satisfaction. Exit interviews reveal that employees feel undervalued and lack growth opportunities.",
+    scenario: "In een organisatie heeft Mark het niet meer naar zijn zin, omdat de manager niet naar zijn individuele behoeften, wensen en vaardigheden luistert. Mark twijfelt om ontslag te nemen, maar vindt het lastig om afscheid te nemen van het bedrijf. Een collega Emma attendeert hem dat ‘geen ontslag’ nemen voor zowel de organisatie als Mark in het nadeel gaan werken. Vanuit frame denkt Emma? ",
     correctFrame: "hr",
-    explanation: "This scenario primarily relates to the Human Resource frame as it deals with employee needs, satisfaction, and development opportunities. The focus should be on creating an environment that supports and develops employees.",
+    explanation: "Bolman & Deal leggen uit dat zodra de fit tussen organisatie en werknemer niet meer goed is, dit in het nadeel voor beide partijen gaat werken. De fit is gebaseerd op de individuele wensen van de werknemer. Daarnaast dat de werknemer zijn vaardigheden kan benutten in de organisatie en dat het werk voldoet aan de financiële- en levensstijl van de werknemer. In dit geval is er geen juiste fit meer, waardoor ontslag nemen een goede optie kan zijn voor Mark. ",
     options: [
-      { id: 'structural', name: 'Structural Frame', icon: Building2, color: 'bg-blue-500' },
+      { id: 'structural', name: 'Structureel Frame', icon: Building2, color: 'bg-blue-500' },
       { id: 'hr', name: 'Human Resource Frame', icon: Users, color: 'bg-green-500' },
-      { id: 'political', name: 'Political Frame', icon: Swords, color: 'bg-red-500' },
-      { id: 'symbolic', name: 'Symbolic Frame', icon: Sparkles, color: 'bg-purple-500' }
+      { id: 'political', name: 'Politiek Frame', icon: Swords, color: 'bg-red-500' },
+      { id: 'symbolic', name: 'Symbolisch Frame', icon: Sparkles, color: 'bg-purple-500' }
     ]
   },
   {
     id: 2,
-    scenario: "A merger between two companies is causing confusion about reporting lines and job responsibilities. Teams are unsure about their roles and who makes which decisions.",
+    scenario: ": Een grote multinational heeft de afgelopen maanden moelijkheden ervaren in de snelheid van besluitvorming. Het duurt lang voordat opdrachten worden goedgekeurd en er wordt te laat teruggekoppeld naar weknemers, wat ook gevolgen heeft voor hun werk. Dit leidt tot veel frustratie bij de werknemers. Vanuit welk frame zou dit opgelost moeten worden?",
     correctFrame: "structural",
-    explanation: "This is a structural issue as it involves organizational design, clarity of roles, and decision-making processes. The structural frame helps address these organizational architecture challenges.",
+    explanation: "Het Structural Frame, er zijn problemen in de efficientie van besluitvorming en taken zijn niet goed genoeg verdeeld om snel genoeg te werk te kunnen gaan. ",
     options: [
-      { id: 'structural', name: 'Structural Frame', icon: Building2, color: 'bg-blue-500' },
+      { id: 'structural', name: 'Structureel Frame', icon: Building2, color: 'bg-blue-500' },
       { id: 'hr', name: 'Human Resource Frame', icon: Users, color: 'bg-green-500' },
-      { id: 'political', name: 'Political Frame', icon: Swords, color: 'bg-red-500' },
-      { id: 'symbolic', name: 'Symbolic Frame', icon: Sparkles, color: 'bg-purple-500' }
+      { id: 'political', name: 'Politiek Frame', icon: Swords, color: 'bg-red-500' },
+      { id: 'symbolic', name: 'Symbolisch Frame', icon: Sparkles, color: 'bg-purple-500' }
     ]
   },
   {
     id: 3,
-    scenario: "Different departments are competing for limited budget resources, leading to conflicts and decreased collaboration between teams.",
+    scenario: "Verschillende afdelingen strijden om beperkte budgetmiddelen, wat leidt tot conflicten en verminderde samenwerking tussen teams.",
     correctFrame: "political",
-    explanation: "This scenario best fits the Political frame as it involves resource allocation, power dynamics, and competing interests between different organizational units.",
+    explanation: "Dit scenario past het beste bij het Politieke frame omdat het gaat om middelenverdeling, machtsdynamiek en concurrerende belangen tussen verschillende organisatie-eenheden.",
     options: [
-      { id: 'structural', name: 'Structural Frame', icon: Building2, color: 'bg-blue-500' },
+      { id: 'structural', name: 'Structureel Frame', icon: Building2, color: 'bg-blue-500' },
       { id: 'hr', name: 'Human Resource Frame', icon: Users, color: 'bg-green-500' },
-      { id: 'political', name: 'Political Frame', icon: Swords, color: 'bg-red-500' },
-      { id: 'symbolic', name: 'Symbolic Frame', icon: Sparkles, color: 'bg-purple-500' }
+      { id: 'political', name: 'Politiek Frame', icon: Swords, color: 'bg-red-500' },
+      { id: 'symbolic', name: 'Symbolisch Frame', icon: Sparkles, color: 'bg-purple-500' }
+    ]
+  },
+  {
+    id: 4,
+    scenario: "Een bedrijf wil zijn klanttevredenheid verbeteren door betere service te bieden.",
+    correctFrame: "hr",
+    explanation: "Dit scenario past bij het Human Resource frame omdat het gaat om het verbeteren van de vaardigheden en tevredenheid van medewerkers om betere service te bieden.",
+    options: [
+      { id: 'structural', name: 'Structureel Frame', icon: Building2, color: 'bg-blue-500' },
+      { id: 'hr', name: 'Human Resource Frame', icon: Users, color: 'bg-green-500' },
+      { id: 'political', name: 'Politiek Frame', icon: Swords, color: 'bg-red-500' },
+      { id: 'symbolic', name: 'Symbolisch Frame', icon: Sparkles, color: 'bg-purple-500' }
+    ]
+  },
+  {
+    id: 5,
+    scenario: "Een organisatie wil haar interne communicatie verbeteren om misverstanden te verminderen.",
+    correctFrame: "structural",
+    explanation: "Dit is een structureel probleem omdat het gaat om het verbeteren van communicatiekanalen en processen binnen de organisatie.",
+    options: [
+      { id: 'structural', name: 'Structureel Frame', icon: Building2, color: 'bg-blue-500' },
+      { id: 'hr', name: 'Human Resource Frame', icon: Users, color: 'bg-green-500' },
+      { id: 'political', name: 'Politiek Frame', icon: Swords, color: 'bg-red-500' },
+      { id: 'symbolic', name: 'Symbolisch Frame', icon: Sparkles, color: 'bg-purple-500' }
+    ]
+  },
+  {
+    id: 6,
+    scenario: ": Jaarlijks wordt aan werknemers gevraagd hoe betrokken zij zich voelen bij het bedrijf. Uit onderzoek bleek dat veel werknemers sinds het pensioen van de oprichter (die voor velen een boegbeeld was) zich minder identificeren met de visie van de organisatie. Vanuit welk frame is dit probleem het beste te benaderen?",
+    correctFrame: "symbolic",
+    explanation: "Het Symbolic Frame, omdat de oprichter van het bedrijf gezien kan worden als een held van het bedrijf. Hij is de personificatie van de waarden en visie van de organisatie, waardoor naast zijn rol als baas zijn functie ook een diepere betekenis heeft voor de werknemers. Als hij stopt zorgt dit mogelijk voor problemen met de identiteit van ",
+    options: [
+      { id: 'structural', name: 'Structureel Frame', icon: Building2, color: 'bg-blue-500' },
+      { id: 'hr', name: 'Human Resource Frame', icon: Users, color: 'bg-green-500' },
+      { id: 'political', name: 'Politiek Frame', icon: Swords, color: 'bg-red-500' },
+      { id: 'symbolic', name: 'Symbolisch Frame', icon: Sparkles, color: 'bg-purple-500' }
+    ]
+  },
+  {
+    id: 7,
+    scenario: "Een organisatie wil de samenwerking tussen afdelingen verbeteren om innovatie te bevorderen.",
+    correctFrame: "political",
+    explanation: "Dit scenario past bij het Politieke frame omdat het gaat om het beheren van belangen en samenwerking tussen verschillende afdelingen.",
+    options: [
+      { id: 'structural', name: 'Structureel Frame', icon: Building2, color: 'bg-blue-500' },
+      { id: 'hr', name: 'Human Resource Frame', icon: Users, color: 'bg-green-500' },
+      { id: 'political', name: 'Politiek Frame', icon: Swords, color: 'bg-red-500' },
+      { id: 'symbolic', name: 'Symbolisch Frame', icon: Sparkles, color: 'bg-purple-500' }
+    ]
+  },
+  {
+    id: 8,
+    scenario: "Een werknemer klaagt bij zijn manager dat hij zijn werk nutteloos vindt. Hij geeft aan dat veel van zijn taken te veel overeenkomen met die van zijn collega’s op de afdeling. Hierdoor heeft het gevoel dat de dubbelzinnige taakverdeling leidt tot verveling en frustratie. Welk frame kan de manager gebruiken om deze spanning over de taken het beste te bemiddelen? ",
+    correctFrame: "structural",
+    explanation: "Het structural frame, bij dit probleem kan de spanning van het “gap versus overlap” dilemma worden herkend. Hierbij is met betrekking tot te taakverdeling te veel “overlap”, waardoor de afdeling niet functioneel verloopt. Er moet met een structurele bril gekeken worden naar de functies en taken binnen de afdeling om dit probleem te helpen. ",
+    options: [
+      { id: 'structural', name: 'Structureel Frame', icon: Building2, color: 'bg-blue-500' },
+      { id: 'hr', name: 'Human Resource Frame', icon: Users, color: 'bg-green-500' },
+      { id: 'political', name: 'Politiek Frame', icon: Swords, color: 'bg-red-500' },
+      { id: 'symbolic', name: 'Symbolisch Frame', icon: Sparkles, color: 'bg-purple-500' }
+    ]
+  },
+  {
+    id: 9,
+    scenario: ": Sinds het thuiswerken tijdens de coronapandemie merkt de manager dat medewerkers in de vroege ochtend minder productief en betrokken zijn. Werknemers geven aan dat ze zonder de gezamenlijke dagstart (waarbij ze samen koffie drinken en spreken over de dagelijkse doelen) minder verbonden voelen en niet in hun gebruikelijke ritme komen. De manager wil een dagstart creëren die dezelfde betekenis heeft, maar dan op afstand. Welk frame kan hij hier het beste bij gebruiken?",
+    correctFrame: "symbolic",
+    explanation: "Het Symbolic Frame, omdat de dagstart gezien kan worden als een ritueel. Het gaat niet alleen om de letterlijke activiteit maar ook om de diepere betekenis, het creëert saamhorigheid en helpt de werknemers om te starten met de dag in een routine. Het is een mentale schakel voor de werkcultuur die nu bij het thuiswerken ook weer een symbolische waarde kan geven voor de werknemers (Bolman en Deal, 2021, pp. 287-291). ",
+    options: [
+      { id: 'structural', name: 'Structureel Frame', icon: Building2, color: 'bg-blue-500' },
+      { id: 'hr', name: 'Human Resource Frame', icon: Users, color: 'bg-green-500' },
+      { id: 'political', name: 'Politiek Frame', icon: Swords, color: 'bg-red-500' },
+      { id: 'symbolic', name: 'Symbolisch Frame', icon: Sparkles, color: 'bg-purple-500' }
+    ]
+  },
+  {
+    id: 10,
+    scenario: "Een manager merkt dat zijn werknemers schade aan brengen aan de organisatie. De werknemers maken grote fouten en leveren werk met slechte kwaliteit. De manager wil graag de problemen oplossen. Dit wil de manager gaan doen door te investeren in zijn medewerkers door middel van training. Hierdoor wil de manager ervoor zorgen dat de werknemers voortdurend in ontwikkeling zijn. Vanuit welk frame handelt de manager? ",
+    correctFrame: "hr",
+    explanation: "De manager handelt vanuit de HR-frame door te investeren in zijn werknemers. Hierdoor zorgt de manager ervoor dat de kennis en vaardigheden van de werknemers up to date blijven. De werknemers kunnen zo groeien mee groeien met de ontwikkelingen van het bedrijf, waardoor fouten en slechte kwaliteit worden voorkomen. Daarnaast krijgen werknemers het gevoel dat de manager in hun investeert, waardoor zij zich waardig en gewenst voelen in de organisatie. ",
+    options: [
+      { id: 'structural', name: 'Structureel Frame', icon: Building2, color: 'bg-blue-500' },
+      { id: 'hr', name: 'Human Resource Frame', icon: Users, color: 'bg-green-500' },
+      { id: 'political', name: 'Politiek Frame', icon: Swords, color: 'bg-red-500' },
+      { id: 'symbolic', name: 'Symbolisch Frame', icon: Sparkles, color: 'bg-purple-500' }
     ]
   }
 ];
@@ -64,6 +148,9 @@ export default function Learn() {
     setShowExplanation(true);
     if (frameId === questions[currentQuestion].correctFrame) {
       setScore(score + 1);
+    }
+    if (isLastQuestion) {
+      setTimeout(() => setCurrentQuestion(currentQuestion + 1), 2000);
     }
   };
 
@@ -88,15 +175,24 @@ export default function Learn() {
     return (
       <div className="max-w-4xl mx-auto p-6">
         <div className="bg-white rounded-lg shadow-md p-8 text-center">
-          <h2 className="text-3xl font-bold mb-4">Quiz Complete!</h2>
+          <h2 className="text-3xl font-bold mb-4">Quiz Voltooid!</h2>
+          <div className="text-6xl font-bold text-indigo-600 mb-4">
+            {score} / {questions.length}
+          </div>
           <p className="text-xl mb-6">
-            You scored {score} out of {questions.length} questions correctly.
+            U heeft {score} van de {questions.length} vragen correct beantwoord.
           </p>
+          <div className="w-full bg-gray-200 rounded-full h-4 mb-6">
+            <div
+              className="bg-indigo-600 h-4 rounded-full"
+              style={{ width: `${(score / questions.length) * 100}%` }}
+            />
+          </div>
           <button
             onClick={resetQuiz}
             className="bg-indigo-600 text-white px-6 py-3 rounded-md hover:bg-indigo-700"
           >
-            Try Again
+            Probeer Opnieuw
           </button>
         </div>
       </div>
@@ -107,10 +203,10 @@ export default function Learn() {
     <div className="max-w-4xl mx-auto space-y-8">
       <div className="text-center">
         <h1 className="text-4xl font-bold text-gray-900 mb-4">
-          Learn the Four Frames
+          Leer de Vier Frames
         </h1>
         <p className="text-xl text-gray-600">
-          Practice identifying the most relevant frame for different scenarios
+          Oefen met het identificeren van het meest relevante frame voor verschillende scenario's
         </p>
       </div>
 
@@ -118,7 +214,7 @@ export default function Learn() {
         <div className="mb-6">
           <div className="flex justify-between items-center mb-4">
             <span className="text-sm font-medium text-gray-500">
-              Question {currentQuestion + 1} of {questions.length}
+              Vraag {currentQuestion + 1} van {questions.length}
             </span>
             <span className="text-sm font-medium text-gray-500">
               Score: {score}
@@ -179,7 +275,7 @@ export default function Learn() {
 
         {showExplanation && (
           <div className="mb-6 p-4 bg-gray-50 rounded-lg border border-gray-200">
-            <h3 className="font-semibold mb-2">Explanation:</h3>
+            <h3 className="font-semibold mb-2">Uitleg:</h3>
             <p className="text-gray-700">{question.explanation}</p>
           </div>
         )}
@@ -189,7 +285,7 @@ export default function Learn() {
             onClick={isLastQuestion ? resetQuiz : nextQuestion}
             className="w-full bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700"
           >
-            {isLastQuestion ? 'Restart Quiz' : 'Next Question'}
+            {isLastQuestion ? 'Herstart Quiz' : 'Volgende Vraag'}
           </button>
         )}
       </div>

@@ -12,31 +12,31 @@ type Frame = {
 const frames: Frame[] = [
   {
     id: 'structural',
-    name: 'Structural Frame',
+    name: 'Structureel Frame',
     icon: Building2,
     color: 'bg-blue-500',
-    description: 'Focus on organizational architecture, rules, roles, and goals',
+    description: 'Focus op organisatiearchitectuur, regels, rollen, en doelen',
   },
   {
     id: 'hr',
     name: 'Human Resource Frame',
     icon: Users,
     color: 'bg-green-500',
-    description: 'Emphasizes understanding people, their needs, skills, and relationships',
+    description: 'Benadrukt het begrijpen van mensen, hun behoeften, vaardigheden, en relaties',
   },
   {
     id: 'political',
-    name: 'Political Frame',
+    name: 'Politiek Frame',
     icon: Swords,
     color: 'bg-red-500',
-    description: 'Deals with power, conflict, competition, and organizational politics',
+    description: 'Behandelt macht, conflict, concurrentie, en organisatiepolitiek',
   },
   {
     id: 'symbolic',
-    name: 'Symbolic Frame',
+    name: 'Symbolisch Frame',
     icon: Sparkles,
     color: 'bg-purple-500',
-    description: 'Focuses on culture, meaning, ritual, ceremony, and stories',
+    description: 'Richt zich op cultuur, betekenis, ritueel, ceremonie, en verhalen',
   },
 ];
 
@@ -62,24 +62,24 @@ export default function Advice() {
     // In a real application, this would call an API
     const mockAdvice: Record<string, string[]> = {
       structural: [
-        'Review and optimize organizational structure',
-        'Clarify roles and responsibilities',
-        'Establish clear performance metrics',
+        'Beoordeel en optimaliseer de organisatiestructuur',
+        'Verduidelijk rollen en verantwoordelijkheden',
+        'Stel duidelijke prestatie-indicatoren vast',
       ],
       hr: [
-        'Conduct skills assessment',
-        'Implement training programs',
-        'Improve communication channels',
+        'Voer een vaardigheidsbeoordeling uit',
+        'Implementeer trainingsprogramma\'s',
+        'Verbeter communicatiekanalen',
       ],
       political: [
-        'Map key stakeholders and their interests',
-        'Build coalitions for change',
-        'Address resource allocation conflicts',
+        'Breng belangrijke belanghebbenden en hun belangen in kaart',
+        'Bouw coalities voor verandering',
+        'Pak conflicten over middelenverdeling aan',
       ],
       symbolic: [
-        'Develop compelling change narrative',
-        'Create meaningful rituals and ceremonies',
-        'Reinforce organizational values',
+        'Ontwikkel een overtuigend veranderingsverhaal',
+        'Creëer betekenisvolle rituelen en ceremonies',
+        'Versterk organisatiewaarden',
       ],
     };
 
@@ -96,10 +96,10 @@ export default function Advice() {
     <div className="max-w-4xl mx-auto space-y-8">
       <div className="text-center">
         <h1 className="text-4xl font-bold text-gray-900 mb-4">
-          Four Frames Advisor
+          Vlechtwerk Advies
         </h1>
         <p className="text-xl text-gray-600">
-          Get tailored recommendations based on multiple perspectives
+          Krijg op maat gemaakte aanbevelingen op basis van meerdere perspectieven
         </p>
       </div>
 
@@ -125,42 +125,42 @@ export default function Advice() {
 
       {step === 1 && (
         <div className="bg-white rounded-lg shadow-md p-6">
-          <h2 className="text-2xl font-semibold mb-4">Describe Your Situation</h2>
+          <h2 className="text-2xl font-semibold mb-4">Beschrijf Uw Situatie</h2>
           <div className="space-y-4">
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">
-                Current Situation
+                Huidige Situatie
               </label>
               <textarea
                 className="w-full p-2 border rounded-md"
                 rows={3}
                 value={context.situation}
                 onChange={(e) => setContext(prev => ({ ...prev, situation: e.target.value }))}
-                placeholder="Describe your current organizational situation..."
+                placeholder="Beschrijf uw huidige organisatie situatie..."
               />
             </div>
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">
-                Goals
+                Doelen
               </label>
               <textarea
                 className="w-full p-2 border rounded-md"
                 rows={3}
                 value={context.goals}
                 onChange={(e) => setContext(prev => ({ ...prev, goals: e.target.value }))}
-                placeholder="What are your main objectives?"
+                placeholder="Wat zijn uw belangrijkste doelen?"
               />
             </div>
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">
-                Challenges
+                Uitdagingen
               </label>
               <textarea
                 className="w-full p-2 border rounded-md"
                 rows={3}
                 value={context.challenges}
                 onChange={(e) => setContext(prev => ({ ...prev, challenges: e.target.value }))}
-                placeholder="What challenges are you facing?"
+                placeholder="Welke uitdagingen ervaart u?"
               />
             </div>
             <button
@@ -168,7 +168,7 @@ export default function Advice() {
               disabled={!context.situation || !context.goals || !context.challenges}
               className="w-full bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700 disabled:bg-gray-300 disabled:cursor-not-allowed"
             >
-              Next Step
+              Volgende Stap
             </button>
           </div>
         </div>
@@ -176,7 +176,7 @@ export default function Advice() {
 
       {step === 2 && (
         <div className="bg-white rounded-lg shadow-md p-6">
-          <h2 className="text-2xl font-semibold mb-4">Select Frames to Analyze</h2>
+          <h2 className="text-2xl font-semibold mb-4">Selecteer Frames om te Analyseren</h2>
           <div className="grid md:grid-cols-2 gap-4 mb-6">
             {frames.map((frame) => {
               const Icon = frame.icon;
@@ -209,14 +209,14 @@ export default function Advice() {
               onClick={() => setStep(1)}
               className="flex-1 border border-gray-300 text-gray-700 py-2 px-4 rounded-md hover:bg-gray-50"
             >
-              Back
+              Terug
             </button>
             <button
               onClick={generateAdvice}
               disabled={selectedFrames.length === 0}
               className="flex-1 bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700 disabled:bg-gray-300 disabled:cursor-not-allowed"
             >
-              Generate Advice
+              Genereer Advies
             </button>
           </div>
         </div>
@@ -224,7 +224,7 @@ export default function Advice() {
 
       {step === 3 && (
         <div className="bg-white rounded-lg shadow-md p-6">
-          <h2 className="text-2xl font-semibold mb-6">Recommendations</h2>
+          <h2 className="text-2xl font-semibold mb-6">Aanbevelingen</h2>
           <div className="space-y-6">
             {Object.entries(advice).map(([frameId, recommendations]) => {
               const frame = frames.find(f => f.id === frameId)!;

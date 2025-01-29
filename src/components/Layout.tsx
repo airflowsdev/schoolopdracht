@@ -7,10 +7,10 @@ export default function Layout() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navigation = [
-    { name: 'Four Frames', href: '/', icon: Frame },
-    { name: 'Advice Generator', href: '/advice', icon: LineChart },
-    { name: 'Educational Module', href: '/learn', icon: GraduationCap },
-    { name: 'Resources', href: '/resources', icon: BookOpen },
+    { name: 'Four Frames', href: '/home', icon: Frame },
+    { name: 'Statisch Advies', href: '/home/advice', icon: LineChart },
+    { name: 'Educatie Module', href: '/home/learn', icon: GraduationCap },
+    { name: 'FrameWiki', href: '/home/resources', icon: BookOpen },
   ];
 
   return (
@@ -21,14 +21,13 @@ export default function Layout() {
           <div className="flex justify-between h-16">
             <div className="flex">
               <div className="flex-shrink-0 flex items-center">
-                <Frame className="h-8 w-8 text-indigo-600" />
-                <span className="ml-2 text-xl font-bold text-gray-900">Four Frames Advisor</span>
+                <Link to="/home" className="ml-2 text-xl font-bold text-gray-900">Vlechtwerk Advies</Link>
               </div>
             </div>
             
             {/* Desktop Navigation */}
             <div className="hidden md:flex md:items-center md:space-x-6">
-              {navigation.map((item) => {
+              {navigation.slice(1).map((item) => {
                 const Icon = item.icon;
                 return (
                   <Link
@@ -41,6 +40,15 @@ export default function Layout() {
                   </Link>
                 );
               })}
+              <button
+                onClick={() => {
+                  sessionStorage.removeItem('isLoggedIn');
+                  window.location.href = '/';
+                }}
+                className="text-gray-600 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium"
+              >
+                Log uit
+              </button>
             </div>
 
             {/* Mobile menu button */}

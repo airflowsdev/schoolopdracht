@@ -1,54 +1,57 @@
 import React from 'react';
 import { Building2, Users, Swords, Sparkles, LineChart, GraduationCap, BookOpen } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 export default function Home() {
   const frames = [
     {
-      name: 'Structural Frame',
+      name: 'Structureel Frame',
       icon: Building2,
-      description: 'Focus on organizational architecture, rules, roles, and goals',
+      description: 'Focus op organisatiearchitectuur, regels, rollen, en doelen',
       color: 'bg-blue-500',
     },
     {
-      name: 'Human Resource Frame',
+      name: 'HR Frame',
       icon: Users,
-      description: 'Emphasizes understanding people, their needs, skills, and relationships',
+      description: 'Benadrukt het begrijpen van mensen, hun behoeften, vaardigheden, en relaties',
       color: 'bg-green-500',
     },
     {
-      name: 'Political Frame',
+      name: 'Politiek Frame',
       icon: Swords,
-      description: 'Deals with power, conflict, competition, and organizational politics',
+      description: 'Behandelt macht, conflict, concurrentie, en organisatiepolitiek',
       color: 'bg-red-500',
     },
     {
-      name: 'Symbolic Frame',
+      name: 'Symbolisch Frame',
       icon: Sparkles,
-      description: 'Focuses on culture, meaning, ritual, ceremony, and stories',
+      description: 'Richt zich op cultuur, betekenis, ritueel, ceremonie, en verhalen',
       color: 'bg-purple-500',
     },
   ];
 
   return (
-    <div className="space-y-8">
+    <motion.div className="space-y-12" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
       <div className="text-center">
-        <h1 className="text-4xl font-bold text-gray-900 mb-4">
-          Welcome to Four Frames Advisor
+        <h1 className="text-5xl font-extrabold text-gray-900 mb-6">
+          Welkom bij Vlechtwerk Advies
         </h1>
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Analyze and improve your organization through multiple perspectives using Bolman and Deal's Four Frames model
+        <p className="text-lg text-gray-500 max-w-2xl mx-auto">
+          Analyseer en verbeter organisaties vanuit meerdere perspectieven met behulp van het Vier Frames-model van Bolman en Deal
         </p>
       </div>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
         {frames.map((frame) => {
           const Icon = frame.icon;
           return (
-            <div
+            <motion.div
               key={frame.name}
-              className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow"
+              className="bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition-shadow transform hover:-translate-y-1"
+              whileHover={{ scale: 1.05 }}
             >
-              <div className={`${frame.color} w-12 h-12 rounded-lg flex items-center justify-center mb-4`}>
+              <div className={`${frame.color} w-14 h-14 rounded-full flex items-center justify-center mb-5`}>
                 <Icon className="h-6 w-6 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">
@@ -57,45 +60,45 @@ export default function Home() {
               <p className="text-gray-600">
                 {frame.description}
               </p>
-            </div>
+            </motion.div>
           );
         })}
       </div>
 
       <div className="bg-white rounded-lg shadow-md p-8 mt-8">
         <h2 className="text-2xl font-bold text-gray-900 mb-4">
-          Get Started
+          Aan de slag
         </h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div className="p-6 bg-indigo-50 rounded-lg">
+          <Link to="/home/advice" className="p-6 bg-indigo-50 rounded-lg block">
             <LineChart className="h-8 w-8 text-indigo-600 mb-4" />
             <h3 className="text-lg font-semibold text-gray-900 mb-2">
-              Generate Advice
+              Genereer Statisch Advies
             </h3>
             <p className="text-gray-600">
-              Input your organizational context and receive frame-specific recommendations
+              Voer uw organisatiecontext in en ontvang framespecifieke aanbevelingen
             </p>
-          </div>
-          <div className="p-6 bg-green-50 rounded-lg">
+          </Link>
+          <Link to="/home/learn" className="p-6 bg-green-50 rounded-lg block">
             <GraduationCap className="h-8 w-8 text-green-600 mb-4" />
             <h3 className="text-lg font-semibold text-gray-900 mb-2">
-              Learn the Frames
+              Leer de Frames
             </h3>
             <p className="text-gray-600">
-              Interactive exercises and case studies to master the Four Frames approach
+              Interactieve oefeningen en casestudies om de Vier Frames-aanpak te beheersen
             </p>
-          </div>
-          <div className="p-6 bg-purple-50 rounded-lg">
+          </Link>
+          <Link to="/home/resources" className="p-6 bg-purple-50 rounded-lg block">
             <BookOpen className="h-8 w-8 text-purple-600 mb-4" />
             <h3 className="text-lg font-semibold text-gray-900 mb-2">
-              Explore Resources
+              Verken Bronnen
             </h3>
             <p className="text-gray-600">
-              Access additional materials, examples, and best practices
+              Toegang tot aanvullende materialen, voorbeelden, en best practices
             </p>
-          </div>
+          </Link>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }

@@ -1,32 +1,33 @@
 import React from 'react';
-import { BookOpen, FileText, Video, Users, Download, ExternalLink } from 'lucide-react';
+import { BookOpen, FileText, Video, Users, Download, ExternalLink, Building2, Swords, Sparkles } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 type Resource = {
   title: string;
   description: string;
-  type: 'article' | 'video' | 'case-study' | 'template';
+  type: "article" | "video" | "case-study" | "template";
   icon: React.ElementType;
   link: string;
 };
 
 const resources: Resource[] = [
   {
-    title: "Understanding Organizational Politics",
-    description: "A comprehensive guide to navigating political dynamics in organizations using the Political Frame perspective.",
+    title: "Begrip van Organisatiepolitiek",
+    description: "Een uitgebreide gids voor het navigeren door politieke dynamiek in organisaties met behulp van het Politieke Frame-perspectief.",
     type: "article",
     icon: FileText,
     link: "https://hbr.org/2016/07/what-everyone-should-know-about-office-politics"
   },
   {
-    title: "Building Effective Teams",
-    description: "Learn how to apply the Human Resource Frame to develop high-performing teams and foster employee engagement.",
+    title: "Effectieve Teams Bouwen",
+    description: "Leer hoe u het Human Resource Frame kunt toepassen om hoogpresterende teams te ontwikkelen en medewerkersbetrokkenheid te bevorderen.",
     type: "video",
     icon: Video,
     link: "https://www.youtube.com/watch?v=ef-aYiRZXWI"
   },
   {
-    title: "Organizational Structure Case Study",
-    description: "Real-world example of how a company used the Structural Frame to reorganize and improve efficiency.",
+    title: "Organisatiestructuur Casestudy",
+    description: "Praktijkvoorbeeld van hoe een bedrijf het Structurele Frame gebruikte om te reorganiseren en de efficiëntie te verbeteren.",
     type: "case-study",
     icon: Users,
     link: "https://hbr.org/2019/03/the-right-way-to-restructure-your-organization"
@@ -35,13 +36,13 @@ const resources: Resource[] = [
 
 const downloadTemplates = [
   {
-    title: "Four Frames Analysis Template",
-    description: "A structured template for analyzing organizational situations using all four frames.",
+    title: "Vier Frames Analyse Sjabloon",
+    description: "Een gestructureerd sjabloon voor het analyseren van organisatiesituaties met behulp van alle vier frames.",
     format: "PDF"
   },
   {
-    title: "Change Management Worksheet",
-    description: "Guide for planning organizational changes considering multiple perspectives.",
+    title: "Verandermanagement Werkblad",
+    description: "Gids voor het plannen van organisatieveranderingen vanuit meerdere perspectieven.",
     format: "PDF"
   }
 ];
@@ -51,118 +52,83 @@ export default function Resources() {
     <div className="max-w-6xl mx-auto space-y-8">
       <div className="text-center">
         <h1 className="text-4xl font-bold text-gray-900 mb-4">
-          Resources & Materials
+          FrameWiki
         </h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Access a curated collection of articles, case studies, and practical tools to deepen your understanding of the Four Frames approach
+          Klik op een van de onderstaandeframes om meer informatie te krijgen.
         </p>
       </div>
 
-      {/* Featured Resources */}
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {resources.map((resource) => {
-          const Icon = resource.icon;
-          return (
-            <a
-              key={resource.title}
-              href={resource.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow group"
-            >
-              <div className="flex items-start space-x-4">
-                <div className="bg-indigo-100 rounded-lg p-3 group-hover:bg-indigo-200 transition-colors">
-                  <Icon className="h-6 w-6 text-indigo-600" />
-                </div>
-                <div className="flex-1">
-                  <div className="flex items-center space-x-2">
-                    <h3 className="font-semibold text-gray-900">{resource.title}</h3>
-                    <ExternalLink className="h-4 w-4 text-gray-400 group-hover:text-indigo-600" />
-                  </div>
-                  <p className="text-gray-600 mt-2">{resource.description}</p>
-                  <span className="inline-block mt-3 text-sm font-medium text-indigo-600">
-                    View {resource.type}
-                  </span>
-                </div>
-              </div>
-            </a>
-          );
-        })}
-      </div>
-
-      {/* Templates Section */}
-      <div className="bg-white rounded-lg shadow-md p-8">
-        <div className="flex items-center space-x-3 mb-6">
-          <BookOpen className="h-6 w-6 text-indigo-600" />
-          <h2 className="text-2xl font-bold text-gray-900">Templates & Worksheets</h2>
-        </div>
-        <div className="grid md:grid-cols-2 gap-6">
-          {downloadTemplates.map((template) => (
-            <div
-              key={template.title}
-              className="border border-gray-200 rounded-lg p-4 hover:border-indigo-300 transition-colors"
-            >
-              <div className="flex items-start justify-between">
-                <div>
-                  <h3 className="font-semibold text-gray-900">{template.title}</h3>
-                  <p className="text-gray-600 mt-1">{template.description}</p>
-                </div>
-                <button
-                  className="flex items-center space-x-2 text-indigo-600 hover:text-indigo-700"
-                  onClick={() => alert('Download functionality would be implemented here')}
-                >
-                  <Download className="h-5 w-5" />
-                  <span className="text-sm font-medium">{template.format}</span>
-                </button>
-              </div>
-            </div>
-          ))}
-        </div>
+      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12 mb-12">
+        <Link to="/home/structural" className="p-6 bg-blue-50 rounded-lg block text-center">
+          <Building2 className="h-12 w-12 text-blue-600 mb-4 mx-auto" />
+          <h3 className="text-lg font-semibold text-gray-900 mb-2">
+            Structureel Frame
+          </h3>
+        </Link>
+        <Link to="/home/hr" className="p-6 bg-green-50 rounded-lg block text-center">
+          <Users className="h-12 w-12 text-green-600 mb-4 mx-auto" />
+          <h3 className="text-lg font-semibold text-gray-900 mb-2">
+            HR Frame
+          </h3>
+        </Link>
+        <Link to="/home/political" className="p-6 bg-red-50 rounded-lg block text-center">
+          <Swords className="h-12 w-12 text-red-600 mb-4 mx-auto" />
+          <h3 className="text-lg font-semibold text-gray-900 mb-2">
+            Politiek Frame
+          </h3>
+        </Link>
+        <Link to="/home/symbolic" className="p-6 bg-purple-50 rounded-lg block text-center">
+          <Sparkles className="h-12 w-12 text-purple-600 mb-4 mx-auto" />
+          <h3 className="text-lg font-semibold text-gray-900 mb-2">
+            Symbolisch Frame
+          </h3>
+        </Link>
       </div>
 
       {/* Best Practices Section */}
-      <div className="bg-gradient-to-r from-indigo-500 to-purple-600 rounded-lg shadow-md p-8 text-white">
-        <h2 className="text-2xl font-bold mb-6">Best Practices</h2>
+      <div className="bg-white rounded-lg shadow-md p-8">
+        <h2 className="text-2xl font-bold mb-6 text-gray-900">Best Practices</h2>
         <div className="grid md:grid-cols-2 gap-6">
           <div>
-            <h3 className="font-semibold mb-3">When to Use Each Frame</h3>
-            <ul className="space-y-2">
+            <h3 className="font-semibold mb-3 text-gray-800">Wanneer Elk Frame te Gebruiken</h3>
+            <ul className="space-y-2 text-gray-700">
               <li className="flex items-center space-x-2">
-                <span className="block w-2 h-2 bg-white rounded-full" />
-                <span>Use the Structural Frame when dealing with organizational design and efficiency</span>
+                <span className="block w-2 h-2 bg-gray-800 rounded-full" />
+                <span>Gebruik het Structurele Frame bij organisatieontwerp en efficiëntie</span>
               </li>
               <li className="flex items-center space-x-2">
-                <span className="block w-2 h-2 bg-white rounded-full" />
-                <span>Apply the HR Frame for people-related issues and development</span>
+                <span className="block w-2 h-2 bg-gray-800 rounded-full" />
+                <span>Pas het HR Frame toe voor mensgerelateerde kwesties en ontwikkeling</span>
               </li>
               <li className="flex items-center space-x-2">
-                <span className="block w-2 h-2 bg-white rounded-full" />
-                <span>Consider the Political Frame during conflicts and resource allocation</span>
+                <span className="block w-2 h-2 bg-gray-800 rounded-full" />
+                <span>Overweeg het Politieke Frame tijdens conflicten en middelenverdeling</span>
               </li>
               <li className="flex items-center space-x-2">
-                <span className="block w-2 h-2 bg-white rounded-full" />
-                <span>Use the Symbolic Frame for cultural change and meaning-making</span>
+                <span className="block w-2 h-2 bg-gray-800 rounded-full" />
+                <span>Gebruik het Symbolische Frame voor culturele verandering en betekenisgeving</span>
               </li>
             </ul>
           </div>
           <div>
-            <h3 className="font-semibold mb-3">Tips for Analysis</h3>
-            <ul className="space-y-2">
+            <h3 className="font-semibold mb-3 text-gray-800">Tips voor Analyse</h3>
+            <ul className="space-y-2 text-gray-700">
               <li className="flex items-center space-x-2">
-                <span className="block w-2 h-2 bg-white rounded-full" />
-                <span>Always consider multiple frames for complex situations</span>
+                <span className="block w-2 h-2 bg-gray-800 rounded-full" />
+                <span>Overweeg altijd meerdere frames voor complexe situaties</span>
               </li>
               <li className="flex items-center space-x-2">
-                <span className="block w-2 h-2 bg-white rounded-full" />
-                <span>Start with the most relevant frame but don't ignore others</span>
+                <span className="block w-2 h-2 bg-gray-800 rounded-full" />
+                <span>Begin met het meest relevante frame maar negeer de anderen niet</span>
               </li>
               <li className="flex items-center space-x-2">
-                <span className="block w-2 h-2 bg-white rounded-full" />
-                <span>Document your analysis and revisit assumptions regularly</span>
+                <span className="block w-2 h-2 bg-gray-800 rounded-full" />
+                <span>Documenteer uw analyse en herzie regelmatig aannames</span>
               </li>
               <li className="flex items-center space-x-2">
-                <span className="block w-2 h-2 bg-white rounded-full" />
-                <span>Involve stakeholders from different perspectives</span>
+                <span className="block w-2 h-2 bg-gray-800 rounded-full" />
+                <span>Betrek belanghebbenden vanuit verschillende perspectieven</span>
               </li>
             </ul>
           </div>
