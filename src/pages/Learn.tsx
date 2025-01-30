@@ -17,7 +17,7 @@ type Question = {
 const questions: Question[] = [
   {
     id: 1,
-    scenario: "In een organisatie heeft Mark het niet meer naar zijn zin, omdat de manager niet naar zijn individuele behoeften, wensen en vaardigheden luistert. Mark twijfelt om ontslag te nemen, maar vindt het lastig om afscheid te nemen van het bedrijf. Een collega Emma attendeert hem dat ‘geen ontslag’ nemen voor zowel de organisatie als Mark in het nadeel gaan werken. Vanuit frame denkt Emma? ",
+    scenario: "In een organisatie heeft Mark het niet meer naar zijn zin, omdat de manager niet naar zijn individuele behoeften, wensen en vaardigheden luistert. Mark twijfelt om ontslag te nemen, maar vindt het lastig om afscheid te nemen van het bedrijf. Een collega Emma attendeert hem dat ‘geen ontslag’ nemen voor zowel de organisatie als Mark in het nadeel gaan werken. Vanuit welk frame denkt Emma? ",
     correctFrame: "hr",
     explanation: "Bolman & Deal leggen uit dat zodra de fit tussen organisatie en werknemer niet meer goed is, dit in het nadeel voor beide partijen gaat werken. De fit is gebaseerd op de individuele wensen van de werknemer. Daarnaast dat de werknemer zijn vaardigheden kan benutten in de organisatie en dat het werk voldoet aan de financiële- en levensstijl van de werknemer. In dit geval is er geen juiste fit meer, waardoor ontslag nemen een goede optie kan zijn voor Mark. ",
     options: [
@@ -53,9 +53,9 @@ const questions: Question[] = [
   },
   {
     id: 4,
-    scenario: "Een bedrijf wil zijn klanttevredenheid verbeteren door betere service te bieden.",
+    scenario: "Vanuit de ideeën van Hackman zijn er drie cruciale factoren voor de werknemers in een organisatie: De werknemers voeren betekenisvol werk uit, hebben persoonlijke verantwoordelijkheid en krijgen feedback over resultaten. Vanuit welk frame komen deze factoren?",
     correctFrame: "hr",
-    explanation: "Dit scenario past bij het Human Resource frame omdat het gaat om het verbeteren van de vaardigheden en tevredenheid van medewerkers om betere service te bieden.",
+    explanation: "Het HR-frame, het HR-frame omschrijft dat deze drie factoren zorgen voor gemotiveerde werknemers en een goede fit tussen organisatie en werknemer."
     options: [
       { id: 'structural', name: 'Structureel Frame', icon: Building2, color: 'bg-blue-500' },
       { id: 'hr', name: 'Human Resource Frame', icon: Users, color: 'bg-green-500' },
@@ -65,9 +65,9 @@ const questions: Question[] = [
   },
   {
     id: 5,
-    scenario: "Een organisatie wil haar interne communicatie verbeteren om misverstanden te verminderen.",
+    scenario: "Maarten werkt in een team bij een vastgoedbedrijf, maar hij merkt om dat de rollen en verantwoordelijkheden van medewerkers niet duidelijk zijn gedefinieerd. Nieuwe medewerkers krijgen een algemene introductie en gedetailleerde instructies over taakverdeling en werkprocessen ontbreken. Hierdoor interpreteren werknemers hun rol op basis van persoonlijke voorkeuren. Sommigen richten zich vooral op klantvriendelijkheid en improviseren bij de invulling van taken, terwijl anderen zich voornamelijk op snelheid focussen. Dit leidt tot inconsistentie in de service. Binnen welk frame kan dit probleem verholpen worden?",
     correctFrame: "structural",
-    explanation: "Dit is een structureel probleem omdat het gaat om het verbeteren van communicatiekanalen en processen binnen de organisatie.",
+    explanation: "Dit is een dilemma binnen het structurele frame: Lack of clarity vs. lack of creativity. Dit is een uitdaging voor organisaties om een balans te vinden tussen deze twee uitersten: genoeg duidelijkheid om efficiënt te werken, maar ook genoeg vrijheid om creativiteit en probleemoplossend vermogen te stimuleren.",
     options: [
       { id: 'structural', name: 'Structureel Frame', icon: Building2, color: 'bg-blue-500' },
       { id: 'hr', name: 'Human Resource Frame', icon: Users, color: 'bg-green-500' },
@@ -89,9 +89,9 @@ const questions: Question[] = [
   },
   {
     id: 7,
-    scenario: "Een organisatie wil de samenwerking tussen afdelingen verbeteren om innovatie te bevorderen.",
+    scenario: "Julian is sinds kort aangesteld als manager in een Retail bedrijf. Hij werkte hier nog niet en ervaart moeilijkheden in de sfeer die er is binnen het bedrijf. Een van de werknemers Sanne, werkt al 10 jaar bij het bedrijf en weet veel over de werking van het bedrijf. Werknemers neigen naar haar toe te trekken voor vragen en taken in plaats van naar Julian, wiens taak het eigenlijk is om te ondersteunen en aan te sturen. Binnen welk frame ligt dit probleem?",
     correctFrame: "political",
-    explanation: "Dit scenario past bij het Politieke frame omdat het gaat om het beheren van belangen en samenwerking tussen verschillende afdelingen.",
+    explanation: "Het Politieke Frame, Sanne beschikt over de machtsbron reputatie en informatie en expertise. Dit zorgt ervoor dat mensen naar haar toe trekken. Julian kan dit als lastig ervaren omdat hij als manager de macht hoort te hebben. ",
     options: [
       { id: 'structural', name: 'Structureel Frame', icon: Building2, color: 'bg-blue-500' },
       { id: 'hr', name: 'Human Resource Frame', icon: Users, color: 'bg-green-500' },
